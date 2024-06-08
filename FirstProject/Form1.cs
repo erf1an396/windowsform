@@ -22,20 +22,20 @@ namespace FirstProject
             i = int.Parse(((Label)sender).Name[3].ToString());
             j = int.Parse(((Label)sender).Name[4].ToString());
 
-            if (e.Button == MouseButtons.Left)
+            if(e.Button == MouseButtons.Left)
             {
 
                 ((Label)sender).Text = "*";
                 XO[i, j] = 1;
                 check(i, j, 1);
             }
-            else
+
+            if(e.Button == MouseButtons.Right)
             {
                 ((Label)sender).Text = "$";
                 XO[i, j] = 2;
                 check(i, j, 2);
             }
-
 
         }
 
